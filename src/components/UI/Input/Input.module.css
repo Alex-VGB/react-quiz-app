@@ -22,7 +22,7 @@
 
 .Input span {
     color: #f01f30;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: bold;
 }
 .Input.invalid label {
