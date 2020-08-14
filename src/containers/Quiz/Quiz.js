@@ -76,17 +76,19 @@ class Quiz extends React.Component {
     isQuizFinished() {
         return this.state.activeQuestion + 1 === this.state.quiz.length
     }
+
     retryHandler = () => {
         this.setState({
-            activeQuestion : 0,
+            activeQuestion: 0,
             answerState: null,
             isFinished: false,
             results: {}
         })
     }
-componentDidMount() {
+
+    async componentDidMount() {
         console.log('Quiz ID = ', this.props.match.params.id)
-}
+    }
 
     render() {
         return (
