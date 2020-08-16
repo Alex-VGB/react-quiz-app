@@ -7,6 +7,7 @@ import {fetchQuizes} from "../../store/actions/quiz";
 
 class QuizList extends React.Component {
 
+
     renderQuizes() {
         return this.props.quizes.map(quiz => {
             return (
@@ -44,7 +45,7 @@ class QuizList extends React.Component {
 function mapStateToProps(state) {
     return {
         quizes: state.quiz.quizes,
-        loading: state.quiz.loading
+        loading: state.quiz.loading,
     }
 }
 

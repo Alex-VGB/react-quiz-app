@@ -15,11 +15,10 @@ export function fetchQuizes() {
         try {
             const response = await axios.get('/quizes.json')
             const quizes = []
-
             Object.keys(response.data).forEach((key, index) => {
                 quizes.push({
                     id: key,
-                    name: `Test ${index + 1}`
+                    name: `Test № ${index + 1}`
                 })
             })
             dispatch(fetchQuizesSuccess(quizes))
@@ -36,6 +35,7 @@ export function fetchQuizById(quizId) {
         try {
             const response = await axios.get(`/quizes/${quizId}.json`)
             const quiz = response.data
+
             dispatch(fetchQuizSuccess(quiz))
         } catch (e) {
             dispatch(fetchQuizesError(e))
